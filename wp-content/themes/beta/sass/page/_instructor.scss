@@ -1,0 +1,38 @@
+body.page-template-page-instructor {
+    article {
+        margin-bottom: 20px;
+        .instructor-box {
+            background-color: #fff;
+            @include transition(background-color 0.3s linear);
+            @include box-shadow(0 0 5px $gray-lighter);
+            .instructor-header {
+            }
+            .instructor-content {
+                text-align: center;
+                .instructor-name {
+                    p {
+                        margin: 0;
+                        a {
+                            padding: 10px 0;
+                            color: $gray-dark;
+                            display: block;
+                            &:hover {
+                                text-decoration: none;
+                            }
+                        }
+                        small {
+                            display: block;
+                        }
+                    }
+                }
+            }
+            &:hover {
+                a {
+                    color: #fff !important;
+                }
+                background: $gray-light;
+                @include opacity(0.9);
+            }
+        }
+    }
+}

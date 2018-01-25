@@ -1,0 +1,157 @@
+$experimental-support-for-svg: true;
+.button {
+    width: 100%;
+    padding: 25px 30px;
+    &.button-s {
+        padding: 15px 30px;
+    }
+    &.button-xs {
+        width: 50%;
+        padding: 10px 30px;
+        margin: 10px 0 0;
+        font-size: 18px;
+    }
+    font-size: 26px;
+    font-weight: normal;
+    text-align: center;
+    color: #fff;
+    background: #333;
+    border-style: solid;
+    border-width: 1px;
+    border-top-color: rgba(255, 255, 255, 0.2);
+    border-right-color: rgba(0, 0, 0, 0.2);
+    border-bottom-color: rgba(0, 0, 0, 0.25);
+    border-left-color: rgba(255, 255, 255, 0.5);
+    @include border-radius(3px);
+    display: block;
+    &:link,&:visited,&:hover,&:active {
+        text-decoration: none;
+    }
+    &:hover {
+        color: #fff;
+        @include opacity(0.95);
+    }
+    &.button-orange {
+        color: #fff;
+        @include text-shadow(0 1px 1px darken($orange, 20%));
+        @include background-image(linear-gradient(right, $orange, lighten($orange, 8%)));
+        @include filter-gradient($orange, lighten($orange, 8%), vertical);
+    }
+    &.button-document {
+        color: #fff;
+        @include text-shadow(0 1px 1px darken($preset, 20%));
+        @include background-image(linear-gradient(right, $preset, lighten($preset, 8%)));
+        @include filter-gradient($preset, lighten($preset, 8%), vertical);
+    }
+    &.button-access {
+        width: 100%;
+        padding: 10px;
+        font-size: 23px;
+        color: #fff;
+        @include text-shadow(0 1px 1px darken($access, 20%));
+        @include background-image(linear-gradient(right, $access, lighten($access, 8%)));
+        @include filter-gradient($access, lighten($access, 8%), vertical);
+    }
+    &.button-submit {
+        width: 50%;
+        padding: 10px 15px;
+        margin-left: 15px;
+        font-size: 21px;
+        color: #fff;
+        @include text-shadow(0 1px 1px darken($access, 20%));
+        @include background-image(linear-gradient(right, $access, lighten($access, 8%)));
+        @include filter-gradient($access, lighten($access, 8%), vertical);
+        float: left;
+    }
+    &.button-prev {
+        width: 30%;
+        padding: 10px 15px;
+        margin-right: 15px;
+        font-size: 21px;
+        color: #fff;
+        @include text-shadow(0 1px 1px darken($gray-darker, 20%));
+        @include background-image(linear-gradient(right, $gray-darker, lighten($gray-darker, 8%)));
+        @include filter-gradient($gray-darker, lighten($gray-darker, 8%), vertical);
+        float: left;
+    }
+    &.button-application {
+        width: 100%;
+        margin: auto;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        @include text-shadow(0 1px 1px darken($access, 20%));
+        @include background-image(linear-gradient(right, $access, lighten($access, 8%)));
+        @include filter-gradient($access, lighten($access, 8%), vertical);
+    }
+    &.button-active {
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+        @include text-shadow(0 1px 1px darken($active, 20%));
+        @include background-image(linear-gradient(right, $active, lighten($active, 8%)));
+        @include filter-gradient($active, lighten($active, 8%), vertical);
+    }
+    &.button-default {
+        width: 100%;
+        padding: 10px 15px;
+        margin-right: 15px;
+        font-size: 21px;
+        color: #fff;
+        @include text-shadow(0 1px 1px darken($gray-darker, 20%));
+        @include background-image(linear-gradient(right, $gray-darker, lighten($gray-darker, 8%)));
+        @include filter-gradient($gray-darker, lighten($gray-darker, 8%), vertical);
+    }
+    small {
+        margin-left: 20px;
+        font-size: 50%;
+        vertical-align: middle;
+    }
+}
+
+#application {
+    width: 100%;
+    position: fixed;
+    bottom: 64px;
+    text-align: center;
+    z-index: 100;
+    a {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        color: #fff;
+        @include text-shadow(0 1px 1px darken($access, 20%));
+        @include background-image(linear-gradient(right, $access, lighten($access, 8%)));
+        @include filter-gradient($access, lighten($access, 8%), vertical);
+        display: block;
+    }
+}
+
+.navbar-toggle {
+    border: none;
+    &:hover,&:active,&:focus {
+        background: none !important;
+    }
+}
+
+@media screen and (max-width:640px){
+    .button {
+        &.button-s {
+            font-size: 18px;
+        }
+        &.button-xs {
+            width: 100%;
+            font-size: 16px;
+        }
+        &.button-access {
+            width: 100%;
+            font-size: 18px;
+        }
+        &.button-submit,&.button-prev {
+            width: 100%;
+        }
+        small {
+            margin: 0;
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,83 @@
+#information {
+    dl {
+        width: 100%;
+        margin: 0 auto 30px;
+        padding: 10px;
+        dt {
+            width: 100%;
+            padding: 15px 50px 15px 10px;
+            font-size: 21px;
+            font-weight: normal;
+            background-image: url('../images/arrow-down.gif');
+            background-repeat: no-repeat;
+            //background-attachment: fixed;
+            background-position: right 20px center;
+            border-bottom: 1px solid #EEE;
+            text-indent: 10px;
+            line-height: 40px;
+            cursor: pointer;
+            display: table;
+            &.open {
+                background-image: url('../images/arrow-up.gif');
+            }
+            span {
+                width: 140px;
+                font-size: 14px;
+                margin-right: 20px;
+                vertical-align: middle;
+                display: table-cell;
+            }
+        }
+        dt.open {
+            
+        }
+        dd {
+            background: #FFF;
+            padding: 10px;
+            line-height: 1.5;
+            display: none;
+            overflow: hidden;
+        }
+    }
+}
+
+@media screen and (max-width:640px){
+
+#information {
+    dl {
+        width: 100%;
+        margin: 0 auto 30px;
+        padding: 10px;
+        dt {
+            width: 100%;
+            padding: 15px 35px 15px 0;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 1.4 !important;
+            border-bottom: 1px solid #EEE;
+            text-indent: 10px;
+            line-height: 40px;
+            cursor: pointer;
+            display: table;
+            span {
+                width: 100%;
+                font-size: 12px;
+                margin-right: 20px;
+                vertical-align: middle;
+                display: block;
+            }
+        }
+        dt.open {
+            
+        }
+        dd {
+            background: #FFF;
+            padding: 10px;
+            line-height: 1.5;
+            display: none;
+            overflow: hidden;
+        }
+    }
+}
+
+}

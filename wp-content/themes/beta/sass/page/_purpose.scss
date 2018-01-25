@@ -1,0 +1,16 @@
+body.page-template-page-purpose {
+    #purpose-list {
+        padding-left: 15px;
+        padding-right: 15px;
+        list-style: none;
+        li {
+            border-bottom: 1px solid $gray-lighter;
+            a {
+                color: $gray-dark;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                display: block;
+            }
+        }
+    }
+}

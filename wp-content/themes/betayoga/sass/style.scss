@@ -1,0 +1,581 @@
+/*
+Theme Name: betayoga
+Theme URI: http://www.yoga-gene.com/
+Author: DigitalCube Co.,Ltd
+Author URI: http://www.yoga-gene.com/
+Description: Beta Yoga training Theme.
+Version: 0.1.0
+Text Domain: yoga
+Tags:
+*/
+// Import Bootstrap Compass integration
+@import "bootstrap-compass";
+
+// Import custom Bootstrap variables
+@import "bootstrap-variables";
+
+// Import Bootstrap for Sass
+@import "bootstrap";
+
+@import "compass";
+
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+$white: #fff;
+$black: $gray-base;
+$pink: #FB057D;
+$red: #D80C18;
+$blue: #009F8D;
+$orange: #E94A08;
+$green: #009E41;
+$odd: #fff;
+$even: #fafafa;
+$border: #ccc;
+
+$border-red: "border-odd.png";
+$border-blue: "border-even.png";
+
+.red {
+    -webkit-border-image: image-url($border-red) 1 1 1 stretch;
+    -moz-border-image: image-url($border-red) 1 1 1 stretch;
+    -o-border-image: image-url($border-red) 1 1 1 stretch;
+    border-image: image-url($border-red) 1 1 1 1 stretch;
+    }
+.blue {
+    -webkit-border-image: image-url($border-blue) 1 1 1 stretch;
+    -moz-border-image: image-url($border-blue) 1 1 1 stretch;
+    -o-border-image: image-url($border-blue) 1 1 1 stretch;
+    border-image: image-url($border-blue) 1 1 1 1 stretch;
+}
+
+
+/*--------------------------------------------------------------
+# background
+--------------------------------------------------------------*/
+.cbp_tmtimeline:before {
+    @include background-image(linear-gradient(top, $red, $orange));
+    @include filter-gradient($red, $orange, vertical); //IE用の記述
+}
+
+/*--------------------------------------------------------------
+# default
+--------------------------------------------------------------*/
+body {
+    font-family: 'Noto Sans Japanese', sans-serif;
+    color: #666;
+}
+
+/*--------------------------------------------------------------
+# images
+--------------------------------------------------------------*/
+img {
+    &.circle {
+        width: 100%;
+        padding: 3px;
+        border: 1px solid $border;
+        @include border-radius(100%);
+    }
+    &.frame {
+        padding: 3px;
+        border: 1px solid $border;
+    }
+}
+
+/*--------------------------------------------------------------
+# header
+--------------------------------------------------------------*/
+header {
+    color: $white;
+    background: $gray-base;
+    a {
+        img.logo {
+            width: 100%;
+            margin: 10px 0;
+        }
+        &:hover {
+            @include opacity(0.9);
+        }
+    }
+    nav {
+        ul {
+            width: 80%;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            float: right;
+            li {
+                width: 16.666666666%;
+                text-align: center;
+                float: left;
+                a {
+                    padding: 31px 0;
+                    color: $white;
+                    background: $black;
+                    display: block;
+                    &:hover {
+                        color: $white;
+                        background: $gray-dark;
+                        text-decoration: none;
+                        //@include opacity(0.2);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*--------------------------------------------------------------
+# front-page
+--------------------------------------------------------------*/
+.home {
+    h2 {
+        padding: 0 0 10px 0;
+        margin-bottom: 30px;
+        text-align: center;
+        border-style: solid;
+        box-sizing: border-box;
+        border-width: 0 0 3px 0;
+    }
+    h3 {
+        font-size: 19px;
+    }
+    section {
+        &.odd {
+            padding: 20px 0;
+            background: $odd;
+        }
+        &.even {
+            padding: 20px 0;
+            background: $even;
+        }
+    }
+}
+/*--------------------------------------------------------------
+# topslider
+--------------------------------------------------------------*/
+#top {
+    img {
+        width: 100%;
+    }
+    .container {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    ul {
+        li {
+            //min-height: 600px;
+            max-height: 600px;
+            //overflow: hidden;
+        }
+    }
+}
+
+/*--------------------------------------------------------------
+# sub
+--------------------------------------------------------------*/
+.subFirst {
+    height: 400px;
+    background-image: inline-image("sub-first.png");
+    background-size: cover;
+    background-position: center;
+    b {
+        width: 100%;
+        margin: 25px 50px;
+        color: $white;
+        font-size: 35px;
+        text-align: right;
+        float: right;
+    }
+    p {
+        margin: 20px 0;
+        color: $white;
+        float: left;
+    }
+}
+.subSecond {
+    height: 400px;
+    background-image: inline-image("sub-second.png");
+    background-size: cover;
+    background-position: center;
+    b {
+        width: 100%;
+        margin: 25px 50px;
+        color: $white;
+        font-size: 35px;
+        text-align: left;
+        float: left;
+    }
+    p {
+        margin: 20px 0;
+        color: $white;
+        text-align: right;
+        float: right;
+    }
+}
+/*--------------------------------------------------------------
+# box
+--------------------------------------------------------------*/
+.box {
+    background: $white;
+    @include box-shadow(0px 1px 10px #999);
+    h3 {
+        color: #fff;
+        border-width: 10px 0px 10px 15px;
+    }
+    p {
+        height: 70px;
+        padding: 10px;
+    }
+}
+/*--------------------------------------------------------------
+# footer
+--------------------------------------------------------------*/
+footer {
+    padding: 10px 0;
+    margin-top: 20px;
+    color: $white;
+    background: $gray-base;
+    nav {
+        #footerNav {
+            padding: 0;
+            list-style: none;
+            li {
+                float: left;
+                a {
+                    color: $white;
+                    &:hover {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+    img.logo {
+        width: 100%;
+    }
+    p {
+        &.copy {
+            margin: 0;
+            text-align: center;
+        }
+    }
+}
+
+/*--------------------------------------------------------------
+# section
+--------------------------------------------------------------*/
+section {
+    img {
+        width: 100%;
+    }
+}
+/*--------------------------------------------------------------
+# bxslider
+--------------------------------------------------------------*/
+.bx-wrapper {
+    margin: 0 !important;
+    .bx-viewport {
+        left: 0 !important;
+        border: none !important;
+        @include box-shadow(0);
+    }
+    .bx-controls {
+        position: relative;
+        bottom: 30px;
+    }
+    .bx-prev,.bx-next {
+        width: 50px !important;
+        height: 50px !important;
+        top: initial !important;
+        bottom: 250px !important;
+    }
+    .bx-prev {
+        left: 100px !important;
+        background: image-url('btn-prev.png') no-repeat !important;
+    }
+    .bx-next {
+        right: 100px !important;
+        background: image-url('btn-next.png') no-repeat !important;
+    }
+}
+.bxslider {
+    padding: 0;
+    margin-left: 9999px;
+}
+/*--------------------------------------------------------------
+# circle
+--------------------------------------------------------------*/
+#selection {
+    h3 {
+        padding: 10px;
+        color: $white;
+        &.red {
+            background: image-url($border-red);
+        }
+        &.blue {
+            background: image-url($border-blue);
+        }
+    }
+}
+/*--------------------------------------------------------------
+# character
+--------------------------------------------------------------*/
+#character {
+    h3 {
+        width: 50%;
+        height: 70px;
+        margin: 0 10px 0 0;
+        padding: 0 10px;
+        font-size: 28px;
+        color: $white;
+        float: left;
+        &.red {
+            background: image-url($border-red);
+        }
+        &.blue {
+            background: image-url($border-blue);
+        }
+    }
+}
+/*--------------------------------------------------------------
+# overview
+--------------------------------------------------------------*/
+#overview {
+    img {
+        width: 45%;
+        margin-left: 10px;
+    }
+}
+/*--------------------------------------------------------------
+# course
+--------------------------------------------------------------*/
+#course {
+    span {
+        &.price {
+            font-size: 24px;
+            font-weight: bold;
+            color: $red;
+        }
+    }
+    b {
+        margin: 5px 0 0;
+        font-size: 1.3em;
+        display: block;
+    }
+    .profile {
+        padding: 15px 5px;
+        margin-top: 10px;
+        background: $even;
+        overflow: hidden;
+        img {
+            width: 30%;
+        }
+        h4 {
+            margin: 0;
+        }
+    }
+}
+
+/*--------------------------------------------------------------
+# faq
+--------------------------------------------------------------*/
+#faq {
+    dl {
+        dt {
+            padding: 10px 0;
+            font-size: 21px;
+            border-bottom: 1px dotted $border;
+        }
+        dd {
+            padding: 10px 10px 20px;
+        }
+    }
+}
+/*--------------------------------------------------------------
+# map
+--------------------------------------------------------------*/
+.komazawa-map {
+    height: 400px;
+}
+
+/*--------------------------------------------------------------
+# form
+--------------------------------------------------------------*/
+#form {
+    p {
+        text-align: center;
+        .button-org {
+            width: 100%;
+            height: 70px;
+            color: $white;
+            background: none;
+            border: none;
+            margin: auto;
+            @include background-image(linear-gradient(right, #FF6600, #FFCC66));
+            @include filter-gradient(#FF6600, #FFCC66, vertical);
+            border-style: solid;
+            border-width: 1px;
+            border-top-color: rgba(255, 255, 255, 0.2);
+            border-right-color: rgba(0, 0, 0, 0.2);
+            border-bottom-color: rgba(0, 0, 0, 0.25);
+            border-left-color: rgba(255, 255, 255, 0.5);
+            @include border-radius(3);
+        }
+        .button-dis {
+            width: 100%;
+            height: 70px;
+            color: $white;
+            background: $black;
+        }
+    }
+    /*CheckBoxとText */
+    .wpcf7-list-item {
+        margin-bottom: 10px;
+        display: block;
+        line-height: 1.1;
+        label {
+        	cursor       : pointer;
+        	position     : relative;
+        	padding-left : 25px;
+        	padding-bottom: 4px;
+        	text-indent: 0.3em;
+        	overflow     : hidden;
+        	position     : relative;
+        	display      : inline-block;
+        	box-sizing   : border-box;
+            &:before {
+            	content  : '';
+            	position : absolute;
+            	width    : 20px;
+            	height   : 20px;
+            	left     : 0px;
+            	top      : 1px;
+            	border   : 1px solid #B3B3B3;
+            	z-index  : 3;
+            }
+            &:after {
+            	content           : '';
+            	position          : absolute;
+            	top               : 40%;
+            	left              : 6px;
+            	display           : block;
+            	margin-top        : -7px;
+            	width             : 8px;
+            	height            : 12px;
+            	border-right      : 3px solid $pink;
+            	border-bottom     : 3px solid $pink;
+            	transform         : rotate(45deg);
+            	-webkit-transform : rotate(45deg);
+            	-moz-transform    : rotate(45deg);
+            	z-index           : 1;
+            }
+            input[type="checkbox"] {
+            	-moz-appearance: none;
+            	-webkit-appearance: none;
+            	position   : absolute;
+            	left       : -40px;
+            	width      : 20px;
+            	height     : 20px;
+            	display    : block;
+            	box-shadow : 41px 0px #FFF;
+            	z-index    : 2;
+            	margin     : 0px;
+            	padding    : 0px;
+                &:checked {
+                	box-shadow : none;
+                }
+                &:checked:focus {
+                	box-shadow : 40px 0px #666;
+                	opacity    : 0.1;
+                }
+                &:focus {
+                	box-shadow : 41px 0px #EEE;
+                }
+            }
+        }
+    }
+}
+
+table.original {
+    width: 100%;
+    margin-bottom: 20px;
+    th,td {
+        padding: 25px;
+    }
+    th {
+        //background: $black;
+        vertical-align: middle;
+        text-align: left;
+        width: 30%;
+        overflow: visible;
+        position: relative;
+        //color: $black;
+        border-right: 1px solid $border;
+        //background: $white;
+        //font-weight: normal;
+        //font-size: 15px;
+        &:before {
+            left: 100%;
+            top: 50%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-color: rgba(136, 183, 213, 0);
+            border-left-color: $border;
+            border-width: 10px;
+            margin-top: -10px;
+        }
+        &:after {
+            left: 99.7%;
+            top: 50%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-color: rgba(136, 183, 213, 0);
+            border-left-color: $white;
+            border-width: 10px;
+            margin-top: -10px;
+        }
+    }
+    td {
+        //background: #f8f8f8;
+        width: 70%;
+        padding-left: 40px;
+        .checkbox {
+            margin-bottom: 0;
+        }
+    }
+}
+
+/*--------------------------------------------------------------
+# btn up
+--------------------------------------------------------------*/
+#btn-up {
+    position: fixed;
+    bottom: 120px;
+    right: 100px;
+    cursor: pointer;
+    &:hover {
+        @include opacity(0.9);
+    }
+}
+
+
+/*--------------------------------------------------------------
+# contact form 7
+--------------------------------------------------------------*/
+.div.wpcf7-mail-sent-ok,.wpcf7-response-output {
+    width: 100%;
+    float: left;
+}
+.ajax-loader {
+    width: auto !important;
+}

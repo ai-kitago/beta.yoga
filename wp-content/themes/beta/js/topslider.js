@@ -1,0 +1,1 @@
+jQuery(function($){$('.access-slider').slick({dots:false,dotsClass:'dot-class',arrows:false,centerMode:true,slidesToShow:3,responsive:[{breakpoint:640,settings:{dots:false,slidesToShow:1,slidesToScroll:1,centerPadding:'8%',centerMode:true,}}]});});

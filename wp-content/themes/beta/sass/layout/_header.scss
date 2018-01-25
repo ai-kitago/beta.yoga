@@ -1,0 +1,50 @@
+header.site-header {
+    width: 100%;
+    height: 120px;
+    color: #fff;
+    background: url(../images/header-image-background.png);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    .site-title {
+        margin: 0;
+        padding: 38px 10px 34px;
+        font-size: 16px;
+        line-height: 1.5;
+        float: left;
+    }
+    p {
+        margin: 0;
+        font-size: 14px;
+    }
+    .navbar-brand {
+        height: auto;
+        padding: 20px 15px;
+    }
+    &.site-header {
+        margin-bottom: 2px;
+    }
+}
+
+body.admin-bar {
+    .site-header {
+        margin-top: 32px;
+    }
+}
+
+@media screen and (max-width:640px){
+
+header {
+    &.site-header {
+        height: 60px;
+        img {
+            height: 40px;
+        }
+        .navbar-brand {
+            height: auto;
+            padding: 8px 15px;
+        }
+    }
+}
+
+}

@@ -7,12 +7,16 @@ wp-content/blogs.dir/
 wp-content/cache/
 wp-content/upgrade/
 wp-content/uploads/
+wp-content/ewww/
 wp-content/wp-cache-config.php
 wp-content/plugins/hello.php
+wp-content/plugins/akismet/
 
 /.htaccess
 /license.txt
 /readme.html
 /sitemap.xml
 /sitemap.xml.gz
+/BingSiteAuth.xml
 
+google<SomeHash>.html

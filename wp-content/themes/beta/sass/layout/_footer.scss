@@ -1,0 +1,35 @@
+#group {
+    height: 350px;
+    color: #fff;
+    background-color: #000;
+    background-image: url('../images/footer/group-image-01.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left bottom;
+    background-attachment: fixed;
+    ul {
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+        li {
+            width: 25%;
+            padding-left: 15px;
+            padding-right: 15px;
+            float: left;
+            /*
+            img {
+                width: 70%;
+                height: auto;
+            }
+            */
+        }
+    }
+}
+#footer {
+    padding: 15px 0;
+    background: #000;
+}
+
+@media screen and (max-width:640px){
+
+}
