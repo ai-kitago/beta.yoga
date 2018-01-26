@@ -1,4 +1,5 @@
 *.log
+php.ini
 wp-config.php
 wp-content/advanced-cache.php
 wp-content/backup-db/
@@ -17,7 +18,7 @@ wp-content/themes/betayoga/.sass-cache
 wp-content/themes/betayoga/sass
 wp-content/themes/betayoga-sp/.sass-cache
 wp-content/themes/betayoga-sp/sass
-
+php.ini
 
 /.htaccess
 /license.txt
